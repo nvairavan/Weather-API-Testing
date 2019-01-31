@@ -30,10 +30,6 @@ class CurrentWeather
     @current_weather_data['weather']
   end
 
-  def retrieve_weather_array
-    retrieve_weather[0]
-  end
-
   def retrieve_weather_id
     retrieve_weather[0]['id']
   end
@@ -102,6 +98,10 @@ class CurrentWeather
     @current_weather_data['visibility']
   end
 
+  def retrieve_weather_array
+    retrieve_weather[0]
+  end
+  
   def retrieve_dt
     @current_weather_data['dt']
   end
@@ -149,9 +149,3 @@ end
 
 test = CurrentWeather.new
 test.current_weather_service('London','1fd517da2fc4197f02b06d24a40c8b8e')
-# p test.randomiser
-# p test.retrieve_coord
-# p test.retrieve_coord_lon
-# p test.retrieve_coord_lat
-# p test.retrieve_rain
-# p test.retrieve_rain_3h
