@@ -6,8 +6,12 @@ class CurrentWeather
 
   base_uri 'http://api.openweathermap.org'
   
-  def current_weather_service(city_name, api_key)
+  def current_weather_service_name(city_name, api_key)
     @current_weather_data = JSON.parse(self.class.get("/data/2.5/weather?q=#{city_name}&APPID=#{api_key}").body)
+  end
+  
+  def current_weather_service_id(city_id, api_key)
+    @current_weather_data = JSON.parse(self.class.get("/data/2.5/weather?id=#{city_id}&APPID=#{api_key}").body)
   end
 
   def retrieve_result
