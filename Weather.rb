@@ -12,9 +12,11 @@ class Weather
     FiveDaysWeather.new
   end
 
-  def method_name
-    file = File.read('city_list.json')
-    data_hash = JSON.parse(file)
-  end
-
+  # def randomiser
+  #   file = File.read('city_list.json')
+  #   data_hash = JSON.parse(file)
+  #   item = data_hash[rand(data_hash.length)]
+  #   p city_id = item['id']
+  #   p city_name = item['name']
+  # end
 end

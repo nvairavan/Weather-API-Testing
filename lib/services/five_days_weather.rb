@@ -12,6 +12,6 @@ class FiveDaysWeather
 end
 
 
-test = FiveDaysWeather.new
-p test.five_days_weather_service('London','1fd517da2fc4197f02b06d24a40c8b8e')
+# test = FiveDaysWeather.new
+# p test.five_days_weather_service('London','1fd517da2fc4197f02b06d24a40c8b8e')
 
