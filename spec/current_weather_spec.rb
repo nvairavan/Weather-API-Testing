@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'current weather api' do
 
   context 'requesting information on current weather' do
-
+  
     before(:all) do
       @api_key = ENV['WEATHER_API_KEY']
       @current_weather = CurrentWeather.new
@@ -124,6 +124,10 @@ describe 'current weather api' do
 
     it 'should return country under sys as String' do
       expect(@current_weather.retrieve_sys_country).to be_kind_of(String)
+    end
+
+    it 'should return country under sys with character length of 2' do
+      expect(@current_weather.retrieve_sys_country.length).to eq 2
     end
 
     it 'should return sunrise under sys as Integer' do
