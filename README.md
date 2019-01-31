@@ -24,6 +24,7 @@ Aim of this project is to get better understanding of API(Application programmin
         eg. require 'rspec'
             require_relative '../Weather'
 6. Run the method within that Weather.rb superclass
+7. Run RSpec in the terminal to run the test
 
 ### Challenges
 1. Creating different types of test
